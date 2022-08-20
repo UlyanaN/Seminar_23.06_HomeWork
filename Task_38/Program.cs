@@ -2,13 +2,13 @@
 // Найдите разницу между максимальным и минимальным элементами массива.
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 
-double[] CreateArray(int size, int min, int max)
+double[] CreateArray(int size, double min, double max)
 {
     double[] arr = new double[size];
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        arr[i] = rnd.NextDouble () * (max-min);
     }
     return arr;
 }
@@ -41,8 +41,8 @@ void PrintArray(double[] arr)
         else Console.Write(arr[i] + "]");
     }
 }
-// int[] array = CreateArray(4, - 100, 100);
-double[] array = { 3.5, 7.1, 22.9, 2.3, 78.5 };
+double[] array = CreateArray (5, 1, 100);
+// double[] array = { 3.5, 7.1, 22.9, 2.3, 78.5 };
 PrintArray(array);
 double res = DifBetweenMinMax(array);
 Console.WriteLine();
