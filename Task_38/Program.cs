@@ -41,8 +41,8 @@ void PrintArray(double[] arr)
         else Console.Write(arr[i] + "]");
     }
 }
-// int[] array = CreateArray(4, - 100, 100);
-double[] array = { 2.3, 7.1, 22.9, 3.5, 78.5 };
+int[] array = CreateArray(4, - 100, 100);
+// double[] array = { 2.3, 7.1, 22.9, 3.5, 78.5 };
 PrintArray(array);
 double res = DifBetweenMinMax(array);
 Console.WriteLine();
