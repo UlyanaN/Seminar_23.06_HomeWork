@@ -16,20 +16,20 @@ double[] CreateArray(int size, int min, int max)
 double DifBetweenMinMax(double[] arr)
 {
     double diff = 0;
+    double max = arr[0];
+    double min = arr[0];
     for (int i = 0; i < arr.Length; i++)
     {
-        double max = arr[0];
-        double min = arr[0];
-        if (arr[i] > max)
+        if (max < arr[i])
         {
             max = arr[i];
         }
-        else if (arr[i] < min)
+        if (min > arr[i])
         {
             min = arr[i];
         }
-        diff = max - min;
     }
+    diff = (max - min);
     return diff;
 }
 void PrintArray(double[] arr)
@@ -41,8 +41,8 @@ void PrintArray(double[] arr)
         else Console.Write(arr[i] + "]");
     }
 }
-int[] array = CreateArray(4, - 100, 100);
-// double[] array = { 2.3, 7.1, 22.9, 3.5, 78.5 };
+// int[] array = CreateArray(4, - 100, 100);
+double[] array = { 3.5, 7.1, 22.9, 2.3, 78.5 };
 PrintArray(array);
 double res = DifBetweenMinMax(array);
 Console.WriteLine();
