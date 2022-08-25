@@ -8,9 +8,9 @@
 
 Console.Clear();
 Console.WriteLine("Введите позиции двумерного массива: ");
-Console.WriteLine("Первое число: ");
+Console.WriteLine("Первый индекс: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Второе число: ");
+Console.WriteLine("Второй индекс: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 int[,] CreateMatrixRndInt(int m, int n, int min, int max)
 {
@@ -43,19 +43,13 @@ void PrintMatrix(int[,] arr)
 
 void FindElenent(int[,] arr1, int num1, int num2)
 {
-    for (int i = 0; i < arr1.GetLength(0); i++)
+    int i = num1;
+    int j = num2;
+    if (i < arr1.GetLength(0) && j < arr1.GetLength(1) && i == num1 && j == num2)
     {
-        for (int j = 0; j < arr1.GetLength(1); j++)
-        {
-            if (i == num1 && j == num2)
-                {
-                    Console.WriteLine($"Значение элемента = {arr1[i, j]}");
-                }
-                else Console.WriteLine("Такого элемента не существует");
-                return;
-                
-        }
+        Console.WriteLine($"Значение элемента = {arr1[i, j]}");
     }
+    else Console.WriteLine("Такого элемента не существует");
     return;
 }
 
