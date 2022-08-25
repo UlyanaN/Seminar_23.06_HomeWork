@@ -8,7 +8,7 @@ double[] CreateArray(int size, double min, double max)
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        arr[i] = rnd.NextDouble () * (max-min);
+        arr[i] = rnd.NextDouble () * ((max-min)+ min);
     }
     return arr;
 }
