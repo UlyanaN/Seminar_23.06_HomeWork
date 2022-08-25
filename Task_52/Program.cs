@@ -41,15 +41,15 @@ double [] FindAverage (int[,] arr1)
     double [] averages = new double [arr1.GetLength(1)];
    for (int j = 0; j < arr1.GetLength(1); j++)
     {
-        int sum = 0;
-        int count = 0;
+        double sum = 0;
+        double count = 0;
         for (int i = 0; i < arr1.GetLength(0); i++)
         {
           sum = sum + arr1 [i, j];
           count ++;
         }
        double average =  sum / count;
-       averages [j] = average;
+       averages [j] = Math.Round (average, 2);
     } 
     
     return averages;
