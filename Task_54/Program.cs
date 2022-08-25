@@ -45,8 +45,8 @@ void PrintArray(int[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         if (i == 0) Console.Write("|");
-        if (i < arr.Length - 1) Console.Write($"{arr[i], 3} | ");
-        else Console.Write($"{arr[i], 3} |");
+        if (i < arr.Length - 1) Console.Write($"{arr[i],3} | ");
+        else Console.Write($"{arr[i],3} |");
     }
 }
 
@@ -57,13 +57,13 @@ void ConvertMatrixLinesIntoArray(int[,] arr1)
     {
         for (int j = 0; j < arr1.GetLength(1); j++)
         {
-            arrayMatr1 [j] = arr1 [i, j];
+            arrayMatr1[j] = arr1[i, j];
         }
-        
+
         Array.Sort(arrayMatr1);
-        Array.Reverse (arrayMatr1);
-        PrintArray (arrayMatr1);
-        Console.WriteLine ();
+        Array.Reverse(arrayMatr1);
+        PrintArray(arrayMatr1);
+        Console.WriteLine();
     }
     return;
 }
